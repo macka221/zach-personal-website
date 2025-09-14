@@ -6,8 +6,7 @@ export default function ProfilePhoto() {
         borderRadius: '50%',
         height: '54vh',
         width: '37vw',
-        marginTop: '15%',
-        marginLeft: '-50%'
+        marginTop: '2%',
       }} />
   )
 }
