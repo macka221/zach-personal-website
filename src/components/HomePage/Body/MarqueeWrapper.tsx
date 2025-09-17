@@ -1,12 +1,13 @@
-import Marquee from "react-fast-marquee";
 import MarqueeIcon from "./MarqueeIcon";
 import { CSSProperties } from "react";
 import { IMarqueeIcons } from "@/types/i-marquee-icons.type";
+import Marquee from "react-fast-marquee";
+import { MarqueeDirection } from "@/types/marquee-direction.enum";
 
-export default function MarqueeWrapper({ marqueeImages, className, style }: { marqueeImages: IMarqueeIcons[], className?: string, style?: CSSProperties }) {
+export default function MarqueeWrapper({ marqueeImages, direction, className, style }: { marqueeImages: IMarqueeIcons[], direction: MarqueeDirection, className?: string, style?: CSSProperties }) {
   return (
     <div className={className}>
-      <Marquee autoFill play direction="left" style={{ ...style }} speed={400}>
+      <Marquee autoFill play gradient gradientColor="gray" gradientWidth={12} direction={direction} style={{ ...style }}>
         {
           marqueeImages.map((imageData, index) =>
             <MarqueeIcon
