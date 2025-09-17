@@ -2,6 +2,10 @@ import { IMarqueeIcons } from "@/types/i-marquee-icons.type";
 import MarqueeWrapper from "./MarqueeWrapper";
 import TaglineSection from "./TaglineSection";
 import { MarqueeDirection } from "@/types/marquee-direction.enum";
+import LinksSection from "./LinksSection/LinksSection";
+import ContactSection from "./ContactSection/ContactSection";
+
+//TODO: Move both objects for Homepage carousels to their own respective constants folder.
 
 export default function HomePageBody() {
   const languagesAndDatabaseInfo: IMarqueeIcons[] = [
@@ -42,13 +46,41 @@ export default function HomePageBody() {
   ];
 
   const toolsAndTechnologiesInfo: IMarqueeIcons[] = [
-    { path: '/', name: 'react' },
-    { path: '/', name: 'azure' },
-    { path: '/', name: 'kubernetes' },
-    { path: '/', name: 'linux' },
-    { path: '/', name: 'vue' },
-    { path: '/', name: 'pyTorch' },
-    { path: '/', name: 'expo-go' },
+    {
+      path: '/icons/React_(web_framework)-Logo.wine.png',
+      name: 'react',
+      style: { maxHeight: 140, maxWidth: 140, marginRight: 50 },
+    },
+    {
+      path: '/icons/Azure-Logo-PNG-Clipart.png',
+      name: 'azure',
+      style: { maxWidth: 80, maxHeight: 80, marginRight: 50 },
+    },
+    {
+      path: '/icons/Kubernetes-Logo.wine.png',
+      name: 'kubernetes',
+      style: { maxHeight: 160, maxWidth: 160 },
+    },
+    {
+      path: '/icons/Linux-Logo.wine.png',
+      name: 'linux',
+      style: { marginLeft: -30, marginRight: -20 },
+    },
+    {
+      path: '/icons/Vue.js-Logo.wine.png',
+      name: 'vue',
+      style: { maxHeight: 140, maxWidth: 140, marginRight: 30 },
+    },
+    {
+      path: '/icons/icons8-pytorch-256.png',
+      name: 'pyTorch',
+      style: { maxHeight: 90, maxWidth: 90, marginRight: 70 },
+    },
+    {
+      path: '/icons/expo-go-app-seeklogo.png',
+      name: 'expo-go',
+      style: { maxHeight: 90, maxWidth: 90, marginRight: 60 },
+    },
   ];
 
   return (
@@ -62,6 +94,32 @@ export default function HomePageBody() {
           justifyContent: 'space-evenly',
         }}
       />
+      <LinksSection />
+      <MarqueeWrapper
+        className="tools-and-technologies-marquee"
+        marqueeImages={toolsAndTechnologiesInfo}
+        direction={MarqueeDirection.right}
+        style={{
+          justifyContent: 'space-evenly',
+        }}
+      />
+      <ContactSection />
+      <div
+        className="footer"
+        style={{
+          backgroundColor: '#1E1E1E',
+          display: 'flex',
+          flexDirection: 'row',
+          alignItems: 'center',
+          padding: 20,
+          justifyContent: 'space-between',
+          fontSize: 60,
+          color: '#2FE517',
+          fontWeight: 'bold'
+        }}
+      >
+        I am a footer
+      </div>
     </div>
   )
 }

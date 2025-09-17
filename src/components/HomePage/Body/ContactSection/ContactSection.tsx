@@ -1,15 +1,12 @@
 import { ICardInfo } from "@/types/i-card-info.interface";
 
-// TODO: Get Carousel Component that can be used to house the 3 links
-
-export default function LinksSection() {
-  const linksInformation: ICardInfo[] = [];
-
+export default function ContactSection() {
+  const linkIconInformaation: ICardInfo[] = [];
   return (
     <div
-      className="body-links-section"
+      className="body-contact-section"
       style={{
-        backgroundImage: 'url(/background/UGkuNK.gif)',
+        backgroundImage: 'url(/background/ff-tactivs.gif)',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
@@ -19,9 +16,10 @@ export default function LinksSection() {
         justifyContent: 'space-around',
         flexDirection: 'row',
         alignItems: 'center'
+
       }}
     >
-      I am the links section
+      I am the contacts section
     </div>
   );
 }
