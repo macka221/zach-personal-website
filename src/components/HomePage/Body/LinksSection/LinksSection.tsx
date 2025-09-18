@@ -7,20 +7,25 @@ export default function LinksSection() {
   const linksInformation: ICardInfo[] = [
     {
       path: '/icons/GitHub-Logo.wine.png',
-      url: '',
-      name: '',
+      url: 'https://github.com/macka221',
+      name: 'github logo',
       style: {},
     },
     {
       path: '/icons/pngwing.com.png',
-      url: '',
-      name: '',
-      style: {},
+      url: 'https://gitlab.com/zachareal97',
+      name: 'gitlab logo',
+      style: {
+        width: 200,
+        height: 200,
+        marginTop: 5,
+        marginBottom: 8,
+      }
     },
     {
       path: '/icons/LinkedIn-Icon-Logo.wine.png',
-      url: '',
-      name: '',
+      url: 'https://www.linkedin.com/in/zachare-lofton1997/',
+      name: 'linkedin logo',
       style: {},
     },
   ];
@@ -34,11 +39,11 @@ export default function LinksSection() {
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
         height: '100vh',
-        margin: 0,
         display: 'flex',
-        justifyContent: 'space-between',
+        justifyContent: 'space-around',
         flexDirection: 'row',
-        alignItems: 'center'
+        alignItems: 'center',
+        padding: 20,
       }}
     >
       {

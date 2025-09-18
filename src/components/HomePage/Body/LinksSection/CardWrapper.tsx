@@ -5,19 +5,18 @@ import LinkButton from "./LinkButton";
 
 export default function CardWrapper({ path, url, name, style }: ICardInfo) {
   return (
-    <div
-      className="card-wrapper"
-      style={{
-      }}
-    >
-      <Card>
-        <Box>
-          <CardContent>
-            <CardIcon path={path} name={name} style={{ ...style }} />
-            <LinkButton link={url} />
-          </CardContent>
-        </Box>
-      </Card>
-    </div>
+    <Card sx={{
+      backgroundColor: 'rgba(255, 255, 255, 0.8)',
+      width: 500,
+      height: 500,
+      borderRadius: 10,
+      justifyContent: 'space-evenly',
+      display: 'flex',
+    }}>
+      <CardContent sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        <CardIcon path={path} name={name} style={{ ...style }} />
+        <LinkButton link={url} style={{ marginTop: '20%' }} />
+      </CardContent>
+    </Card>
   );
 }
