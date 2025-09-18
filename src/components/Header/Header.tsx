@@ -1,5 +1,4 @@
 import { Typography } from "@mui/material";
-import NavBar from "./NavBar/NavBar";
 
 
 export default function Header() {
