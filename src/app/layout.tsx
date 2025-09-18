@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={jBastarda9Font.variable}>
       <Head>
-        <title>Zach's Developer Platform</title>
+        <title>{'Zach\'s Developer Platform'}</title>
       </Head>
       <body>
         <AppRouterCacheProvider

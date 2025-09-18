@@ -17,7 +17,7 @@ export default function Header() {
       <Typography
         sx={{ fontSize: 60, fontWeight: 'bold' }}
       >
-        Zachar'e Lofton
+        {'Zachar\'e Lofton'}
       </Typography>
       {/*
         TODO: Fix this component
