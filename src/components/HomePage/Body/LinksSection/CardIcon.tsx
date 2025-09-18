@@ -1,9 +1,12 @@
+import { Box, CardMedia } from "@mui/material";
 import { CSSProperties } from "react";
 
-export default function CardIcon({ path, style }: { path: string, style?: CSSProperties }) {
+export default function CardIcon({ path, name, style }: { path: string, name: string, style?: CSSProperties }) {
   return (
     <>
-      I am an Icon
+      <Box>
+        <CardMedia component="img" image={path} alt={name} sx={{ ...style }} />
+      </Box>
     </>
   );
 }

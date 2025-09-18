@@ -1,3 +1,4 @@
+import { Typography } from "@mui/material";
 import NavBar from "./NavBar/NavBar";
 
 
@@ -14,8 +15,15 @@ export default function Header() {
       color: '#2FE517',
       fontWeight: 'bold'
     }}>
-      {'Zachar\'e Lofton'}
+      <Typography
+        sx={{ fontSize: 60, fontWeight: 'bold' }}
+      >
+        Zachar'e Lofton
+      </Typography>
+      {/*
+        TODO: Fix this component
       <NavBar />
+      */}
     </div>
   )
 }

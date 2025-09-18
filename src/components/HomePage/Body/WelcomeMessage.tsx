@@ -1,3 +1,5 @@
+import { Typography } from "@mui/material";
+
 export default function WelcomeMessage() {
   return (
     <div
@@ -8,7 +10,10 @@ export default function WelcomeMessage() {
 
       }}
     >
-      Welcome To My Website!
+      <Typography sx={{ fontSize: 70, fontWeight: 'bold' }}>
+        Welcome To My Website!
+      </Typography>
+
     </div>
   )
 }

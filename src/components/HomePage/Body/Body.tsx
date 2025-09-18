@@ -4,6 +4,7 @@ import TaglineSection from "./TaglineSection";
 import { MarqueeDirection } from "@/types/marquee-direction.enum";
 import LinksSection from "./LinksSection/LinksSection";
 import ContactSection from "./ContactSection/ContactSection";
+import Footer from "@/components/Footer/Footer";
 
 //TODO: Move both objects for Homepage carousels to their own respective constants folder.
 
@@ -104,22 +105,7 @@ export default function HomePageBody() {
         }}
       />
       <ContactSection />
-      <div
-        className="footer"
-        style={{
-          backgroundColor: '#1E1E1E',
-          display: 'flex',
-          flexDirection: 'row',
-          alignItems: 'center',
-          padding: 20,
-          justifyContent: 'space-between',
-          fontSize: 60,
-          color: '#2FE517',
-          fontWeight: 'bold'
-        }}
-      >
-        I am a footer
-      </div>
+      <Footer />
     </div>
   )
 }
