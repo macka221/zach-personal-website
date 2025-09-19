@@ -7,7 +7,7 @@ import { MarqueeDirection } from "@/types/marquee-direction.enum";
 export default function MarqueeWrapper({ marqueeImages, direction, className, style }: { marqueeImages: IMarqueeIcons[], direction: MarqueeDirection, className?: string, style?: CSSProperties }) {
   return (
     <div className={className}>
-      <Marquee autoFill play gradient gradientColor="gray" gradientWidth={30} direction={direction} style={{ ...style }}>
+      <Marquee autoFill play gradient gradientColor="gray" gradientWidth={30} direction={direction} style={{ backgroundColor: 'ThreeDDarkShadow', ...style }}>
         {
           marqueeImages.map((imageData, index) =>
             <MarqueeIcon

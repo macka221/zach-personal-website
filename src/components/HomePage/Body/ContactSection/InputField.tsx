@@ -1,7 +1,14 @@
 import { Divider, Input, InputAdornment, TextField } from "@mui/material";
 import { CSSProperties } from "react";
 
-export default function InputFieldWrapper({ fieldName, placeholder, divider, multiline, style }: { fieldName: string, placeholder: string, divider?: boolean, multiline?: boolean, style?: CSSProperties }) {
+export default function InputFieldWrapper({
+  fieldName,
+  placeholder,
+  divider,
+  multiline,
+  callBack,
+  style
+}: { callBack: Function, fieldName: string, placeholder: string, divider?: boolean, multiline?: boolean, style?: CSSProperties }) {
   return (
     <>
       <TextField
@@ -13,6 +20,7 @@ export default function InputFieldWrapper({ fieldName, placeholder, divider, mul
           textAlign: 'center',
           ...style
         }}
+        onChange={(e) => callBack(e.target.value)}
         multiline={multiline}
         rows={multiline ? 10 : 1}
         variant="outlined"

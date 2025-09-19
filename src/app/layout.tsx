@@ -5,7 +5,7 @@ import "./globals.css";
 import { ThemeProvider } from "@emotion/react";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 import theme from "./theme";
-import Head from "next/head";
+import { loadEnvConfig } from "@next/env";
 
 const jBastarda9Font = Jacquarda_Bastarda_9({
   weight: ["400"],
@@ -20,9 +20,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={jBastarda9Font.variable}>
-      <Head>
-        <title>{'Zach\'s Developer Platform'}</title>
-      </Head>
       <body>
         <AppRouterCacheProvider
           options={{ key: 'css' }}
