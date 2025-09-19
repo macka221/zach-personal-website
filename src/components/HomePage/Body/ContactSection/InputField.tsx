@@ -8,7 +8,7 @@ export default function InputFieldWrapper({
   multiline,
   callBack,
   style
-}: { callBack: (val: string) => {}, fieldName: string, placeholder: string, divider?: boolean, multiline?: boolean, style?: CSSProperties }) {
+}: { callBack: (val: string) => void, fieldName: string, placeholder: string, divider?: boolean, multiline?: boolean, style?: CSSProperties }) {
   return (
     <>
       <TextField
