@@ -14,7 +14,7 @@ export class SendEmailService {
 
   public async sendEmail(emailContent: { from: string; subject: string; body: string; phone: string; name: string; }): Promise<void> {
     const { data, error } = await this.resendApi.emails.send({
-      to: 'zachare18@gmail.com',
+      to: 'zachloft.consults@gmail.com',
       from: emailContent.from,
       subject: emailContent.subject,
       text: `${emailContent.name} said "${emailContent.body}" \n Here is their contact number: ${emailContent.phone}`,
