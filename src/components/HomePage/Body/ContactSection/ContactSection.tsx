@@ -3,10 +3,11 @@
 import { Button, Grid } from "@mui/material";
 import InputFieldWrapper from "./InputField";
 import { useState } from "react";
-// import { SendEmailService } from "@/service/send-email.service";
+import { SendEmailService } from "@/service/send-email.service";
+import { sendEmailProxy } from "@/service/send-email.proxy";
 
 export default function ContactSection() {
-  // const emailApi = new SendEmailService();
+  const emailApi = new SendEmailService();
 
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
@@ -47,13 +48,21 @@ export default function ContactSection() {
         <Grid size={{ xs: 12, md: 12 }}>
           <InputFieldWrapper fieldName="Message" placeholder="Your message here..." divider multiline callBack={(value: string) => setMessage(value)} />
         </Grid>
-        {/* <Grid> */}
-        {/* <Button variant="contained" onClick={() => emailApi.sendEmail({ name, phone, subject, from: email, body: message })} style={{ backgroundColor: '#', color: 'white', padding: '10px 20px', fontSize: '16px' }}> */}
-        {/*   Send Message */}
-        {/* </Button> */}
-        {/* </Grid> */}
+        <Grid>
+          <Button
+            variant="contained"
+            onClick={() => sendEmailProxy({ name, phone, subject, from: email, body: message })}
+            style={{
+              backgroundColor: '#',
+              color: 'white',
+              padding: '10px 20px',
+              fontSize: '16px'
+            }}>
+            Send Message
+          </Button>
+        </Grid>
       </Grid>
-    </div>
+    </div >
   );
 }
 
