@@ -51,7 +51,8 @@ export default function ContactSection() {
             variant="contained"
             onClick={() => sendEmailProxy({ name, phone, subject, from: email, body: message })}
             style={{
-              backgroundColor: '#',
+              fontFamily: 'Arial, sans-serif',
+              backgroundColor: 'green',
               color: 'white',
               padding: '10px 20px',
               fontSize: '16px'
