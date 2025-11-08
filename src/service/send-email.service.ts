@@ -1,11 +1,10 @@
 import { Resend } from "resend";
-import { emailServerKey } from "./config";
 
 export class SendEmailService {
   private readonly resendApi: Resend;
 
-  constructor() {
-    if (emailServerKey === undefined || emailServerKey.length === 0) {
+  constructor(emailServerKey: string) {
+    if (emailServerKey.length === 0) {
       throw new Error("EMAIL_API_KEY is not set");
     }
 

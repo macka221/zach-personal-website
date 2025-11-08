@@ -7,8 +7,6 @@ import { SendEmailService } from "@/service/send-email.service";
 import { sendEmailProxy } from "@/service/send-email.proxy";
 
 export default function ContactSection() {
-  const emailApi = new SendEmailService();
-
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [name, setName] = useState('');
